@@ -17,6 +17,16 @@ namespace DIO.Series
         private string Descricao { get; set; }
         private int Ano { get; set; }
 
+        public int retornaID()
+        {
+            return this.Id;
+        }
+
+        public string retornaTitulo()
+        {
+            return this.Titulo;
+        }
+
         public override string ToString()
         {
             return $"Gênero: {this.Genero}{Environment.NewLine}Titulo: {this.Titulo}{Environment.NewLine}Descrição: {this.Descricao}{Environment.NewLine}Ano: {this.Ano}";
