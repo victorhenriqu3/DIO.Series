@@ -11,11 +11,13 @@ namespace DIO.Series
             this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
+            this.Excluido = false;
         }
         private Genero Genero { get; set; }
         private string Titulo { get; set; }
         private string Descricao { get; set; }
         private int Ano { get; set; }
+        private bool Excluido { get; set; }
 
         public int retornaID()
         {
@@ -25,6 +27,18 @@ namespace DIO.Series
         public string retornaTitulo()
         {
             return this.Titulo;
+        }
+
+        public int retornaId()
+		{
+			return this.Id;
+		}
+        public bool retornaExcluido()
+		{
+			return this.Excluido;
+		}
+        public void Excluir() {
+            this.Excluido = true;
         }
 
         public override string ToString()
